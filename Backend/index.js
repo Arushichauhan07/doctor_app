@@ -14,13 +14,7 @@ dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 5000
-app.use(cors(
-{
-    origin:["https://doctor-app-92j4.vercel.app/"],
-    methods:["POST","GET"],
-    credentials:true
-}
-));
+
 // const corsOptions = {
 //     origin:true
 // }
@@ -33,7 +27,7 @@ app.get('/',(req, res) => {
 mongoose.set('strictQuery', false)
 const connectDB = async() => {
     try {
-        await mongoose.connect(mongodb+srv://chauhanarushi0709:Arushi0709#@cluster0.a33lnhe.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0,{
+        await mongoose.connect(process.env.MONGO_URL,{
             // useNewUrlParser:true,
             // useUnifiedTopology:true,
         })
