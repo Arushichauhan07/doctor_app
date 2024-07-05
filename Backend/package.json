@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "start-dev": "nodemon index.js"
+    "build":"npm install --prefix ./FRONTEND & npm run build --prefix ./FRONTEND && npm install"
   },
   "author": "Arushi",
   "license": "ISC",
