@@ -33,7 +33,7 @@ app.get('/',(req, res) => {
 mongoose.set('strictQuery', false)
 const connectDB = async() => {
     try {
-        await mongoose.connect(process.env.MONGO_URL,{
+        await mongoose.connect(mongodb+srv://chauhanarushi0709:Arushi0709#@cluster0.a33lnhe.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0,{
             // useNewUrlParser:true,
             // useUnifiedTopology:true,
         })
